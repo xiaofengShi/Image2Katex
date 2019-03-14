@@ -1,0 +1,115 @@
+!!python/object/new:easydict.EasyDict
+dictitems:
+  dataset: &id003 !!python/object/new:easydict.EasyDict
+    dictitems:
+      id_end: 1
+      id_pad: 3
+      id_start: 0
+      id_unk: 2
+      image_folder: &id001
+      - /home/xiaofeng/data/image2latex/handwritten/process/img_padding
+      - /home/xiaofeng/data/image2latex/original/process/img_padding
+      prepared_folder: &id002
+      - ./data/im2latex_dataset/merged/prepared/handwritten/
+      - ./data/im2latex_dataset/merged/prepared/original/
+      vocabulary_file: ./data/im2latex_dataset/merged/prepared/handwritten/properties.npy
+    state:
+      id_end: 1
+      id_pad: 3
+      id_start: 0
+      id_unk: 2
+      image_folder: *id001
+      prepared_folder: *id002
+      vocabulary_file: ./data/im2latex_dataset/merged/prepared/handwritten/properties.npy
+  model: &id004 !!python/object/new:easydict.EasyDict
+    dictitems:
+      MaxPredictLength: 200
+      att_dim: 512
+      batch_size: 16
+      beam_size: 5
+      ckpt_dir: /home/xiaofeng/data/image2latex/merged/model_saved/conv/ckpt
+      ckpt_name: seq2seqAtt
+      clip_value: 5
+      decoder_name: DecoderAtt
+      decoding: beams_search
+      display_iter: 100
+      div_gamma: 1
+      div_prob: 0
+      droupout: 0.3
+      embeding_dims: 80
+      encoder_cnn: vanilla
+      encoder_name: Encode
+      encoder_type: conv
+      eval_dir: /home/xiaofeng/data/image2latex/merged/model_saved/conv/eval
+      gpu_fraction: 0.48
+      learning_decay_rate: 0.94
+      learning_decay_step: 8000
+      learning_init: 0.1
+      learning_type: exponential
+      log_dir: /home/xiaofeng/code/image2katex/log
+      log_file_name: Im2Katex.log
+      log_name: Im2Katex
+      metric_val: perplexity
+      model_saved: /home/xiaofeng/data/image2latex/merged/model_saved/conv
+      n_epochs: 1000
+      optimizer: momentum
+      positional_embeddings: true
+      rnn_decoder_dim: 512
+      rnn_encoder_dim: 256
+      save_iter: 500
+      summary_dir: /home/xiaofeng/data/image2latex/merged/model_saved/conv/summary
+      test_batch_size: 1
+    state:
+      MaxPredictLength: 200
+      att_dim: 512
+      batch_size: 16
+      beam_size: 5
+      ckpt_dir: /home/xiaofeng/data/image2latex/merged/model_saved/conv/ckpt
+      ckpt_name: seq2seqAtt
+      clip_value: 5
+      decoder_name: DecoderAtt
+      decoding: beams_search
+      display_iter: 100
+      div_gamma: 1
+      div_prob: 0
+      droupout: 0.3
+      embeding_dims: 80
+      encoder_cnn: vanilla
+      encoder_name: Encode
+      encoder_type: conv
+      eval_dir: /home/xiaofeng/data/image2latex/merged/model_saved/conv/eval
+      gpu_fraction: 0.48
+      learning_decay_rate: 0.94
+      learning_decay_step: 8000
+      learning_init: 0.1
+      learning_type: exponential
+      log_dir: /home/xiaofeng/code/image2katex/log
+      log_file_name: Im2Katex.log
+      log_name: Im2Katex
+      metric_val: perplexity
+      model_saved: /home/xiaofeng/data/image2latex/merged/model_saved/conv
+      n_epochs: 1000
+      optimizer: momentum
+      positional_embeddings: true
+      rnn_decoder_dim: 512
+      rnn_encoder_dim: 256
+      save_iter: 500
+      summary_dir: /home/xiaofeng/data/image2latex/merged/model_saved/conv/summary
+      test_batch_size: 1
+  predict: &id005 !!python/object/new:easydict.EasyDict
+    dictitems:
+      npy_path: ./static/npy
+      preprocess_dir: ./static/preprocess
+      render_path: ./static/render
+      temp_path: ./static
+      web_path: ./templates
+    state:
+      npy_path: ./static/npy
+      preprocess_dir: ./static/preprocess
+      render_path: ./static/render
+      temp_path: ./static
+      web_path: ./templates
+state:
+  dataset: *id003
+  model: *id004
+  predict: *id005

@@ -1,0 +1,108 @@
+!!python/object/new:easydict.EasyDict
+dictitems:
+  dataset: &id002 !!python/object/new:easydict.EasyDict
+    dictitems:
+      id_end: 1
+      id_pad: 3
+      id_start: 0
+      id_unk: 2
+      prepared_folder: &id001
+      - ./data/errorchecker_dataset/prepared
+      vocabulary_file: ./data/errorchecker_dataset/prepared/properties.npy
+    state:
+      id_end: 1
+      id_pad: 3
+      id_start: 0
+      id_unk: 2
+      prepared_folder: *id001
+      vocabulary_file: ./data/errorchecker_dataset/prepared/properties.npy
+  model: &id003 !!python/object/new:easydict.EasyDict
+    dictitems:
+      MaxPredictLength: 200
+      att_dim: 256
+      batch_size: 16
+      beam_size: 5
+      ckpt_dir: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet/ckpt
+      ckpt_name: ErrorCheck
+      clip_value: 5
+      decoding: beams_search
+      display_iter: 100
+      div_gamma: 1
+      div_prob: 0
+      droupout: 0.3
+      errche_decoder_name: DecoderAtt_errche
+      errche_embeding_dims_source: 128
+      errche_embeding_dims_target: 128
+      errche_encoder_name: Encode_errche
+      errche_encoder_type: Prenet
+      errche_rnn_decoder_dim: 256
+      errche_rnn_encoder_dim: 128
+      eval_dir: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet/eval
+      gpu_fraction: 0.48
+      learning_decay_rate: 0.94
+      learning_decay_step: 8000
+      learning_init: 0.1
+      learning_type: exponential
+      log_dir: /home/xiaofeng/code/image2katex/log
+      log_file_name: ErrorChecker.log
+      log_name: ErrorChecker
+      metric_val: perplexity
+      model_saved: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet
+      n_epochs: 1000
+      optimizer: momentum
+      save_iter: 500
+      summary_dir: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet/summary
+      test_batch_size: 1
+    state:
+      MaxPredictLength: 200
+      att_dim: 256
+      batch_size: 16
+      beam_size: 5
+      ckpt_dir: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet/ckpt
+      ckpt_name: ErrorCheck
+      clip_value: 5
+      decoding: beams_search
+      display_iter: 100
+      div_gamma: 1
+      div_prob: 0
+      droupout: 0.3
+      errche_decoder_name: DecoderAtt_errche
+      errche_embeding_dims_source: 128
+      errche_embeding_dims_target: 128
+      errche_encoder_name: Encode_errche
+      errche_encoder_type: Prenet
+      errche_rnn_decoder_dim: 256
+      errche_rnn_encoder_dim: 128
+      eval_dir: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet/eval
+      gpu_fraction: 0.48
+      learning_decay_rate: 0.94
+      learning_decay_step: 8000
+      learning_init: 0.1
+      learning_type: exponential
+      log_dir: /home/xiaofeng/code/image2katex/log
+      log_file_name: ErrorChecker.log
+      log_name: ErrorChecker
+      metric_val: perplexity
+      model_saved: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet
+      n_epochs: 1000
+      optimizer: momentum
+      save_iter: 500
+      summary_dir: /home/xiaofeng/data/image2latex/ErrorCheck/model_saved/Prenet/summary
+      test_batch_size: 1
+  predict: &id004 !!python/object/new:easydict.EasyDict
+    dictitems:
+      npy_path: ./static/npy
+      preprocess_dir: ./static/preprocess
+      render_path: ./static/render
+      temp_path: ./static
+      web_path: ./templates
+    state:
+      npy_path: ./static/npy
+      preprocess_dir: ./static/preprocess
+      render_path: ./static/render
+      temp_path: ./static
+      web_path: ./templates
+state:
+  dataset: *id002
+  model: *id003
+  predict: *id004
