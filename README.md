@@ -119,7 +119,13 @@ make im2katex-trainval-ori
 ```bash
 make im2katex-trainval-aug
 ```
+### 预训练权重参数
 
+**BaiduDisk:**
+
+链接: https://pan.baidu.com/s/1cUCSxCaReXw9EPs8_lwCRQ 
+
+提取码: bx4b 
 ### 训练自己的数据
 
 #### 数据集预处理

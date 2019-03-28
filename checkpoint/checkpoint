@@ -1,0 +1,2 @@
+model_checkpoint_path: "seq2seqAtt_781500.ckpt"
+all_model_checkpoint_paths: "seq2seqAtt_781500.ckpt"
