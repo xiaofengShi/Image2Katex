@@ -7,7 +7,6 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Wednesday, 5th December 2018 5:20:32 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
 '''
 from __future__ import print_function
 
