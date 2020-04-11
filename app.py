@@ -123,10 +123,10 @@ if __name__ == '__main__':
         logger_name='server')
     logger.info('Server is working ...')
     # Generate the vocab
-    _vocab = cfg.VocabSeq2Seq(_config, logger)
+    _vocab = cfg.VocabSeq2Seq(_config, logger,vacab_file="data/properties.npy")
 
     Moedl = LoadModel(ConfClass=_Configure, _config=_config,
-                      _vocab=_vocab, logger=logger, trainable=False)
+                      _vocab=_vocab, logger=logger, pretrainde="./checkpoint/",trainable=False)
 
     print('Load models done ... ...')
 

@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Friday, 14th December 2018 3:33:12 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 
 

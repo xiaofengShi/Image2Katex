@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Wednesday, 11th July 2018 6:33:16 pm
 Modified By: xiaofeng (sxf1052566766@163.com>)
 -----
-Copyright 2018.06 - 2018 onion Math, onion Math
+ 2018.06 - 2018 Latex Math, Latex Math
 '''
 
 import json
@@ -232,7 +232,7 @@ def generate_dataset(parameters, config):
 
 if __name__ == '__main__':
     print('local or remote represents 0 or 1')
-    print('Enhance style is: ori, diff_threshold, Onion')
+    print('Enhance style is: ori, diff_threshold, Latex')
 
     local_or_not = int(input('Please select the location: local(0) or remote(1):'))
     enhance_type = int(

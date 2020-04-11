@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Tuesday, 11th December 2018 10:58:47 am
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 import numpy as np
 import os

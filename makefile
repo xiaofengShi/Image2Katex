@@ -28,7 +28,10 @@ error-inference:
 	python3 main.py --mode infer --predict_img_path  /home/xiaofeng/data/image2latex/handwritten/process/img_padding --model_type im2katex
 
 
-server:
+server-cpu:
+	python3 app.py --data_type merged --gpu=-1
+
+server-gpu:
 	python3 app.py --data_type merged --gpu=0
 
 # full: build train eval

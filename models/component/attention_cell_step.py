@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Sunday, 2nd December 2018 2:26:37 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 
 import tensorflow as tf

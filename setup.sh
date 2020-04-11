@@ -12,3 +12,4 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 # cd ${SHELL_FOLDER}
 # Run the model
 # python3 app.py --device gpu  --crnn Densenet 
+pip install easydict nltk distance 

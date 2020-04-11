@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Wednesday, 26th December 2018 12:45:11 pm
 Modified By: xiaofeng (sxf1052566766@163.com>)
 -----
-Copyright 2018.06 - 2018 onion Math, onion Math
+2018.06 - 2018 Latex Math, Latex Math
 '''
 
 
@@ -37,22 +37,23 @@ from utils.util import render_to_html
 
 
 class LoadModel(object):
-    def __init__(self, ConfClass, _config, _vocab, logger, trainable=False):
+    def __init__(self, ConfClass, _config, _vocab, logger, pretrainde=None,trainable=False):
         self.ConfClass=ConfClass
         self.config = _config
         self.vocab = _vocab
         self.trainable = trainable
         self.logger = logger
+        self.pretrainde=pretrainde
         self.target_height = self.vocab.target_height
         self.bucket_size = self.vocab.bucket_size
         self.setup()
 
-    def setup(self):
+    def setup(self,):
         """ Load model """
         self.Model = Seq2SeqAttModel(config=self.config, vocab=self.vocab,
                                      logger=self.logger, trainable=self.trainable)
         self.Model.build_inference()
-        _ = self.Model.restore_session()
+        _ = self.Model.restore_session(pretrainde=self.pretrainde)
 
         self.temp_path = os.path.abspath(self.config.predict.temp_path)
         self.preprocess_dir = os.path.abspath(self.config.predict.preprocess_dir)

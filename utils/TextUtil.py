@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2008-11 Qtrac Ltd. All rights reserved.
+#  (c) 2008-11 Qtrac Ltd. All rights reserved.
 # This program or module is free software: you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as published
 # by the Free Software Foundation, either version 3 of the License, or

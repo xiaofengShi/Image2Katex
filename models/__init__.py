@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Sunday, 2nd December 2018 4:12:02 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 
 from .seq2seq_model import Seq2SeqAttModel

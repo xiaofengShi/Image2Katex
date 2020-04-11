@@ -1,5 +1,5 @@
 
-errorchecker_dataset/
-im2latex_dataset/
+errorchecker_dataset/*
+im2latex_dataset/*
 __pycache__/
 *.pyc

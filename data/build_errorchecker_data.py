@@ -9,7 +9,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Monday, 24th December 2018 12:23:37 pm
 Modified By: xiaofeng (sxf1052566766@163.com>)
 -----
-Copyright 2018.06 - 2018 onion Math, onion Math
+ 2018.06 - 2018 Latex Math, Latex Math
 '''
 from __future__ import absolute_import, division, print_function
 

@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Sunday, 2nd December 2018 4:09:49 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 
 from __future__ import absolute_import, division, print_function

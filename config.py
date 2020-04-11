@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Wednesday, 5th December 2018 5:32:04 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 
 import logging
@@ -41,9 +41,10 @@ class ConfigSeq2Seq:
         self.model()
         self.dataset()
         self.predict()
-        self.initalize_dirs()
+        
 
     def model(self):
+        
         _model = edict()
         _model.batch_size = 16
         _model.test_batch_size = 1
@@ -179,14 +180,19 @@ class ConfigSeq2Seq:
 
 
 class VocabSeq2Seq:
-    def __init__(self, config, logger):
+    def __init__(self, config, logger,vacab_file=None):
         self._config = config
         self._logger = logger
+        self.vacab_file=vacab_file
         self.load_vocab()
 
     def load_vocab(self):
-        vocab_dir = os.path.abspath(self._config.dataset.vocabulary_file)
-        vocabulary = np.load(vocab_dir).tolist()
+        if self.vacab_file is None:
+            vocab_dir = os.path.abspath(self._config.dataset.vocabulary_file)
+        else:
+            vocab_dir=self.vacab_file
+        print("vocab_dir",vocab_dir)
+        vocabulary = np.load(vocab_dir,allow_pickle=True).tolist()
         self.vocab_size = vocabulary['vocab_size']
         self.idx_to_token = vocabulary['idx_to_str']
         self.token_to_idx = vocabulary['str_to_idx']

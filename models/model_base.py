@@ -7,7 +7,7 @@ Author: xiaofeng (sxf1052566766@163.com)
 Last Modified: Thursday, 6th December 2018 7:40:45 pm
 Modified By: xiaofeng (sxf1052566766@163.com)
 ---------------------------
-Copyright: 2018.06 - 2018 OnionMath. OnionMath
+: 2018.06 - 2018 . 
 '''
 
 import codecs
@@ -46,7 +46,7 @@ class BaseModel(object):
     def init_session(self):
         NotImplemented
 
-    def restore_session(self):
+    def restore_session(self,pretrainde=None):
         """Reload weights into session
 
         Args:
@@ -54,7 +54,10 @@ class BaseModel(object):
         return:
             restore_iter: int 
         """
-        dir_model = self._ckpt_dir
+        if pretrainde is None:
+            dir_model = self._ckpt_dir
+        else:
+            dir_model=pretrainde
         # print('Model directionary is [{:s}]'.format(dir_model))
         restore_iter = 0
         if os.listdir(dir_model):
