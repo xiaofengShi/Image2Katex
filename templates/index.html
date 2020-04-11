@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Im2Latex</title>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="logo">
+                <span class="navbar-brand">
+                    <p> Image2Latex</p>
+
+                </span>
+            </div>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active" role="presentation">
+                    <a href="{{url_for('see_predict200')}}">SeeSamples1 </a>
+                </li>
+                <li class="active" role="presentation">
+                    <a href="{{url_for('see_predict')}}">SeeSamples2 </a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    <div style="margin: 0 auto;width: 1200px;align-content: center">
+        <h2 align="center">Im2Latex</h2>
+        <form action="" method=post enctype=multipart/form-data align='center'>
+            <input type=file name=file>
+            <input type=submit value=upload>
+        </form>
+
+        <div align="center">
+            <h3 align="left">1. InputImage</h3>
+            {% if img %}
+            <hr />
+            <img src="{{img}}" align='center' width="{{width}}">
+            <hr />
+            {% endif %}
+        </div>
+
+        <div align="center">
+            <h3 align="left">2. ProcessImage</h3>
+            {% if process_img %}
+            <hr>
+            <img src="{{process_img}}" align='center' width="{{width}}">
+            {% endif %}
+            </hr>
+            <div style="float:center">
+                <h3 align="left">3. LatexPredict</h3>
+                <hr>
+                {% if text %}
+                {{text}}
+                {% endif %}
+                </hr>
+            </div>
+            <div>
+                <h3 align="left">4. RenderedImage</h3>
+                <hr>
+                {% if render_imgs %}
+                <img src="{{render_imgs}}" align='center' width="{{width}}">
+                {% endif %}
+                </hr>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
