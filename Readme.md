@@ -1,5 +1,15 @@
 # Img2Katex模型说明V2 
 
+> [!IMPORTANT]
+> **维护状态：历史项目 / maintenance only。** 本项目保留用于研究复现与社区参考，
+> 不再进行功能开发。其依赖栈和预训练模型下载链接可能已经过期；新用户应在隔离
+> 环境中使用，并优先查阅现有 Issue。
+
+> Xiaofeng Shi 当前的研究工作：
+> [GitHub 主页](https://github.com/xiaofengShi) ·
+> [个人网站](https://xiaofengshi.com/) ·
+> [Hugging Face](https://huggingface.co/XiaofengAlg)
+
 ## 简介
 
 本仓库代码实现将公式图像转换为katex输出，是整个ocr项目中，该部分是最难的一部分，该仓库是对原有项目该功能的升级。
