@@ -189,3 +189,13 @@ make im2katex-trainval-aug
 * [Another model repo--网络模型TF](https://github.com/baoblackcoal/RFR-solution)
 * [知乎解释](https://zhuanlan.zhihu.com/p/25031185)
 * [Dataset ori repo-数据集制作](https://github.com/Miffyli/im2latex-dataset)
+
+## Star History
+
+<a href="https://www.star-history.com/#xiaofengShi/Image2Katex&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=xiaofengShi/Image2Katex&amp;type=Date&amp;theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=xiaofengShi/Image2Katex&amp;type=Date" />
+    <img alt="Image2Katex Star History Chart" src="https://api.star-history.com/svg?repos=xiaofengShi/Image2Katex&amp;type=Date" />
+  </picture>
+</a>
